@@ -60,7 +60,7 @@ export default {
       (response) => {
         this.postsWithKeyword = response.data;
         this.$store.commit("SET_POSTS", response.data);
-        console.log(this.$store.state.posts);
+        
       }
     );
     interactionsService
