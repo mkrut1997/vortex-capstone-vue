@@ -91,11 +91,7 @@ export default {
         this.$store.state.posts[index].upVotes++;
         postsService
           .updatePost(this.post.postId, this.$store.state.posts[index])
-          .then((response) => {
-            if (response.status === 200) {
-              console.log("it worked");
-            }
-          });
+          
         this.$store.commit("ADD_INTERACTION", this.interaction);
         interactionsService.addInteraction(this.interaction);
       }
@@ -111,11 +107,7 @@ export default {
         this.$store.state.posts[index].downVotes++;
         postsService
           .updatePost(this.post.postId, this.$store.state.posts[index])
-          .then((response) => {
-            if (response.status === 200) {
-              console.log("it worked");
-            }
-          });
+          
         this.$store.commit("ADD_INTERACTION", this.interaction);
         interactionsService.addInteraction(this.interaction);
       }
@@ -132,11 +124,7 @@ export default {
       }
       postsService
         .updatePost(this.post.postId, this.$store.state.posts[index])
-        .then((response) => {
-          if (response.status === 200) {
-            console.log("it worked");
-          }
-        });
+        
       this.$store.commit("DELETE_INTERACTION", this.interaction);
       interactionsService.deleteInteraction(this.interaction);
     },
@@ -144,7 +132,7 @@ export default {
       let postedAt = this.post.postedAt;
       let dateChange = new Date(postedAt);
   this.date = dateChange.toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit'}) + " " + dateChange.toLocaleDateString();
-console.log(this.date);
+
     }
   },
   created() {

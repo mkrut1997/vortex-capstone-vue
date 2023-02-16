@@ -6,7 +6,7 @@
       <header>
 
           <router-link v-bind:to="{ name: 'home' }">
-          <img src="/vortex.png" alt="logo" class="logo"/>
+          <img src="@/assets/vortex.png" alt="logo" class="logo"/>
         </router-link>
 
       <div class="search-container">

@@ -32,7 +32,7 @@ const router = new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '/vortex-capstone-vue',
       name: 'home',
       component: Home,
       meta: {

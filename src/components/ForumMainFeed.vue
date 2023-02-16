@@ -29,7 +29,7 @@ export default {
     PostsService.getForumPosts(this.$route.params.id).then((response) => {
       this.postsByForum = response.data
       this.$store.commit("SET_POSTS", response.data)
-      console.log(this.$store.state.posts)
+      
     });
     interactionsService.getInteractions(this.$store.state.user.id).then((response) =>{
       this.$store.commit("SET_INTERACTIONS", response.data)
